@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>小红书视频播放</title><link rel="stylesheet" href="popup.css"></head>
+<body><header><img src="icons/icon-128.png" width="42" height="42" alt=""><div><h1>小红书视频播放</h1><p>顺序播放 · 自动重播</p></div></header>
+<fieldset class="modes"><legend>播放模式</legend>
+<label class="setting"><div><b>顺序播放</b><small>按顺序播放一遍，队列结束后停止</small></div><input id="sequential" name="playbackMode" value="sequential" type="radio" checked></label>
+<label class="setting"><div><b>循环播放当前视频</b><small>播放结束后自动点击“重播”</small></div><input id="loop" name="playbackMode" value="single" type="radio"></label>
+<label class="setting"><div><b>队列循环播放</b><small>最后一个播完后，回到第一个</small></div><input id="queueLoop" name="playbackMode" value="queue" type="radio"></label>
+</fieldset>
+<label class="setting"><div><b>静音播放</b><small>自动播放被浏览器阻止时可开启</small></div><input id="muted" type="checkbox"></label>
+<p class="hint">默认顺序播放。每次只能选择一种模式，选择后自动保存。</p>
+<div class="buttons"><button id="start">开始播放</button><button id="stop" class="secondary">停止接管</button></div>
+<div class="buttons"><button id="next" class="secondary">下一个</button><button id="scan" class="secondary">刷新队列</button></div>
+<p id="status" role="status">正在连接页面…</p>
+<button id="openXhs" type="button" hidden>打开小红书</button>
+<script src="popup.js"></script></body></html>

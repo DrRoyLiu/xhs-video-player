@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "小红书 · 顺序播放与循环重播",
+  "version": "1.0.6",
+  "author": "Roy Liu (DrRoyLiu)",
+  "description": "按当前页面的视频卡片顺序播放，或循环重播当前视频。",
+  "permissions": ["storage", "activeTab"],
+  "icons": {"16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png"},
+  "action": {"default_popup": "popup.html", "default_title": "小红书视频播放", "default_icon": {"16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png"}},
+  "content_scripts": [{"matches": ["https://www.xiaohongshu.com/*"], "js": ["content.js"], "run_at": "document_idle"}]
+}
